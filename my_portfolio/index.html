@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="C:\Users\hp\my_portfolio\videos\portfolio video 2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Ramya Gupta, a student</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Ramya Gupta, a student. I love creating beautiful and functional websites.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">Python</div>
+                <div class="skill">C++</div>
+                <!-- Add more skills as needed -->
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project" onclick="openModal('project1')">
+                    <img src="C:\Users\hp\my_portfolio\images\yoga pose detection image.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Yoga Pose Detection</h3>
+                        <p>The project is based on Machine Learning using Python. This project involves using a Convolutional Neural Network (CNN) algorithm for video and image processing 
+                            to detect and classify yoga poses. In this project, we used a white background for video input and captured 
+                            the complete body for pose detection. The system will detect minor mistakes in the user's pose and provide 
+                            advice on how to correct them.</p>
+                    </div>
+                </div>
+                <div class="project" onclick="openModal('project2')">
+                    <img src="C:\Users\hp\my_portfolio\images\online payment fraud image.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Online Payment Fraud Detection</h3>
+                        <p>The project is based on Machine Learning using Python. This project demonstrates the application of machine learning techniques to detect fraudulent transactions 
+                            in online payment systems effectively. I developed a model with high accuracy and reliability by 
+                            preprocessing the data, selecting appropriate models, and tuning hyperparameters.</p>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ramya Gupta. All rights reserved.</p>
+    </footer>
+
+    <!-- Modals for projects -->
+    <div class="modal" id="project1-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project1')">&times;</span>
+            <h2>Project 1</h2>
+            <p>Details about project 1.</p>
+        </div>
+    </div>
+    <div class="modal" id="project2-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project2')">&times;</span>
+            <h2>Project 2</h2>
+            <p>Details about project 2.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
